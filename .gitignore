@@ -1,0 +1,5 @@
+# editors
+.obsidian/
+
+# git files
+.gitconfig
