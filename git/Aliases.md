@@ -9,6 +9,7 @@ brc = checkout -b (create and checkout branch)
 cim = commit -m (create a commit with message)
 st = status (check the status of the git repository)
 puf = push -f (force push changes to the server)
+pus = "!git push -u origin `git br --show-current`" (push and set upstream to current branch name)
 rbi = rebase -i (start an interactive rebase)
 f = fetch (fetch latest details from server)
 r = reset (soft reset the branch)
@@ -28,6 +29,7 @@ To apply the aliases to all repository, add the aliases to global git configurat
     cim = commit -m
     st = status
     puf = push -f
+    pus = "!git push -u origin `git br --show-current`" 
     rbi = rebase -i
     f = fetch
     r = reset
