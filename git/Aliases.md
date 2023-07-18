@@ -15,6 +15,8 @@ f = fetch (fetch latest details from server)
 r = reset (soft reset the branch)
 wip = "!git add . && git cim wip" (add all tracked files and create a wip commit)
 wipp = "!git wip && git push" (add all tracked files, create a wip commit, and push)
+pr = "!git fetch --prune -a" (removes all remotes for branches deleted on server)
+prd = "!git fetch --prune -a | grep -oP 'origin/\\K.*$' | while read line; do git branch -d $line; done" (removes all remotes for branches deleted on server and deletes the branch locally)
 aliases = "!git config --global --get-regexp ^alias.*$" (list global aliases)
 ```
 
@@ -35,6 +37,8 @@ To apply the aliases to all repository, add the aliases to global git configurat
     r = reset
     wip = "!git add . && git cim wip"
     wipp = "!git wip && git push"
+    pr = "!git fetch --prune -a"
+    prd = "!git fetch --prune -a | grep -oP 'origin/\\K.*$' | while read line; do git branch -d $line; done"
     aliases = "!git config --global --get-regexp ^alias.*$"
 ```
 
